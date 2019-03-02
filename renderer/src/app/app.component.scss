@@ -1,0 +1,142 @@
+.container {
+  padding-top: 50px;
+
+  .drop-zones {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    file-drop {
+
+      /deep/ .drop-zone {
+        margin: auto;
+        height: 100px;
+        border: 2px dashed #969696;
+        border-radius: 5px;
+
+        &.over {
+          background-color: #e6f2fe;
+
+          .content {
+            border-color: #009afe;
+
+            span {
+              color: #009afe;
+            }
+          }
+        }
+
+        .content {
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+
+          div {
+
+            color: #969696;
+
+            &:first-of-type {
+              text-transform: uppercase;
+              font-size: 1.2em;
+              font-weight: bold;
+            }
+            &:last-of-type {
+
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .uploaded-image {
+    display: flex;
+    background: #ffffff;
+    margin-top: 1px;
+    height: 40px;
+
+    .thumbnail {
+      flex: 2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+      }
+    }
+
+    .file-name {
+      flex: 7;
+      display: flex;
+      align-items: center;
+      color: #676767;
+      padding-left: 10px;
+      font-size: 0.9em;
+    }
+
+    .statistics {
+      flex: 3;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.8em;
+      min-width: 200px;
+
+      .size-in, .size-out {
+        min-width: 60px;
+      }
+
+      .size-in {
+        text-align: right;
+      }
+
+      .size-out {
+        text-align: left;
+      }
+
+      .arrow {
+        min-width: 20px;
+        text-align: center;
+        font-size: 0.6em;
+      }
+
+      .percent {
+        color: #7eb631;
+        font-weight: bold;
+        min-width: 60px;
+        font-size: 1em;
+        text-align: right;
+      }
+    }
+
+    .actions {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 15px;
+
+      button {
+        border: 0;
+        background-color: #ffffff;
+        color: #676767;
+        padding: 0;
+
+        &:hover {
+          color: #000000;
+        }
+
+        &:active, &:focus {
+          outline: none;
+        }
+      }
+
+      fa-icon {
+        color: #676767;
+      }
+    }
+  }
+}

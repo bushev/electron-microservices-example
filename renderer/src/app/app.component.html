@@ -1,0 +1,63 @@
+<div class="container">
+
+    <div class="drop-zones">
+        <file-drop (onFileDrop)="droppedV1($event)">
+            <div>Drag and drop Files here to Compress</div>
+            <div>Call based IPC</div>
+        </file-drop>
+
+        <file-drop (onFileDrop)="droppedV2($event)">
+            <div>Drag and drop Files here to Compress</div>
+            <div>Event based IPC</div>
+        </file-drop>
+    </div>
+
+    <ng-template ngFor let-file [ngForOf]="files">
+
+        <div class="uploaded-image">
+
+            <div class="thumbnail">
+                <ng-container *ngIf="file.thumbnailUrl">
+                    <img [src]="file.thumbnailUrl" alt="Uploaded image" height="40">
+                </ng-container>
+                <ng-container *ngIf="!file.thumbnailUrl">
+                    <fa-icon icon="spinner" [spin]="true"></fa-icon>
+                </ng-container>
+            </div>
+
+            <div class="file-name">
+                {{ file.relativePath }}
+            </div>
+
+            <div class="statistics">
+                <ng-container *ngIf="file.status === 'processed'">
+                    <div class="size-in">
+                        {{ file.sizeIn | size }}
+                    </div>
+                    <div class="arrow">
+                        <fa-icon icon="arrow-right"></fa-icon>
+                    </div>
+                    <div class="size-out">
+                        {{ file.sizeOut | size }}
+                    </div>
+                    <div class="percent">
+                        -{{ file.percent.toFixed(0) }}%
+                    </div>
+                </ng-container>
+            </div>
+
+            <div class="actions">
+                <ng-container *ngIf="file.status === 'processing'">
+                    <fa-icon icon="spinner" [spin]="true"></fa-icon>
+                </ng-container>
+                <ng-container *ngIf="file.status === 'processed'">
+                    <button (click)="download(file)">
+                        <fa-icon icon="download"></fa-icon>
+                    </button>
+                </ng-container>
+            </div>
+
+        </div>
+
+    </ng-template>
+</div>

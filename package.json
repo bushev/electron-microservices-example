@@ -1,0 +1,32 @@
+{
+  "name": "electron-microservices-example",
+  "version": "1.0.0",
+  "description": "Example of Electron.js microservices application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "rebuild": "electron-rebuild"
+  },
+  "repository": "https://github.com/bushev/electron-microservices-example",
+  "keywords": [
+    "Electron.js",
+    "microservices",
+    "miltiprocessing",
+    "threads",
+    "multithreading",
+    "moleculer"
+  ],
+  "author": "Yury Bushev",
+  "license": "MIT",
+  "devDependencies": {
+    "compress-images": "^1.4.6",
+    "electron": "4.0.4",
+    "electron-prebuilt-compile": "^4.0.0",
+    "electron-rebuild": "^1.8.4",
+    "fs-extra": "^7.0.1",
+    "moleculer": "^0.13.7",
+    "sharp": "^0.21.3",
+    "threads": "^0.12.1",
+    "tmp": "0.0.33"
+  }
+}
