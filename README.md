@@ -1,4 +1,4 @@
-# electron-microservices-example
+# Example of Electron.js microservices application
 
 Quick start
 
