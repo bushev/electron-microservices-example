@@ -1,4 +1,4 @@
-# Example of Electron.js microservices application
+# Example of Electron.js Microservices application
 
 <p align="center">
   <img src="https://thumbs.gfycat.com/ColorfulExhaustedLiger-size_restricted.gif" alt="Electron.js Microservices application">
