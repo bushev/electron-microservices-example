@@ -1,5 +1,9 @@
 # Example of Electron.js microservices application
 
+<p align="center">
+  <img src="https://thumbs.gfycat.com/ColorfulExhaustedLiger-size_restricted.gif" alt="Electron.js Microservices application">
+</p>
+
 Quick start
 
 1. `yarn`
